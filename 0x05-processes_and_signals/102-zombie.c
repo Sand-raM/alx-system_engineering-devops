@@ -5,9 +5,9 @@
 #include <unistd.h>
 
 /**
- * infinite_while - Run an infinite while loop.
+ * infinite_while - Run an infinite while loop
  *
- * Return: Always 0.
+ * Return: 0
  */
 int infinite_while(void)
 {
@@ -19,23 +19,23 @@ int infinite_while(void)
 }
 
 /**
- * main - Creates five zombie processes.
+ * main - Creates five zombie processes
  *
- * Return: Always 0.
+ * Return: 0
  */
 int main(void)
 {
 	pid_t pid;
-	char count = 0;
+	char c = 0;
 
-	while (count < 5)
+	while (c < 5)
 	{
 		pid = fork();
 		if (pid > 0)
 		{
 			printf("Zombie process created, PID: %d\n", pid);
 			sleep(1);
-			count++;
+			c++;
 		}
 		else
 			exit(0);
